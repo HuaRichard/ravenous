@@ -18,6 +18,7 @@ class SearchBar extends React.Component {
         this.handleLocationChange = this.handleLocationChange.bind(this);
         this.handleTermChange = this.handleTermChange.bind(this);
         this.getSortByClass = this.getSortByClass.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);   
     }
 
     renderSortByOptions() {
@@ -52,6 +53,7 @@ class SearchBar extends React.Component {
 
     handleSearch(event) {
         this.props.searchYelp(this.state.term, this.state.sortBy, this.state.location);
+        // event.preventDefault();
     }
 
     render() {
@@ -66,7 +68,7 @@ class SearchBar extends React.Component {
                     <input placeholder="Search Businesses" onChange={this.handleTermChange} />
                     <input placeholder="Where?" onChange={this.handleLocationChange} />
                 </div>
-                <div className="SearchBar-submit">
+                <div className="SearchBar-submit" onClick={this.handleSearch}>
                     <a>Let's Go</a>
                 </div>
             </div>
