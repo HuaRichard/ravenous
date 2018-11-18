@@ -1,5 +1,31 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import "./SearchBar.css";
+
+// const sortByOptions = {
+//     'Best Match': 'best_match',
+//     'Highest Rated': 'rating',
+//     'Most Reviewed': 'review_count'
+// }
+
+// const reducer = (state, action, input) => {
+//     switch (action.type) {
+//         case 'sortBy change': return { sortBy: input };
+//         case 'location change': return { location: input };
+//         case 'term change': return { term: input };
+//         default: return state;
+//     }
+// }
+
+// const [state, dispatch] = useReducer(reducer, {
+//     term: '',
+//     location: '',
+//     sortBy: 'best_match',
+// });
+
+// const SearchBar = () => {
+
+// }
+
 
 const sortByOptions = {
     'Best Match': 'best_match',
