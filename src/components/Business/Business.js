@@ -1,7 +1,8 @@
 import React from 'react';
 import './Business.css';
 
-const Business = ({ imageSrc, name, address, city, state, zipCode, category, rating, reviewCount }) => {
+const Business = ({business}) => {
+    const { imageSrc, name, address, city, state, zipCode, category, rating, reviewCount } = business;
     return (
         <div className="Business">
             <div className="image-container">
